@@ -10,6 +10,8 @@ import {ToolbarModule} from 'primeng/toolbar';
 import { EditorComponent } from './components/editor/editor.component';
 import {SplitButtonModule} from 'primeng/splitbutton';
 import { TopbarComponent } from './components/topbar/topbar.component';
+import {FormsModule} from '@angular/forms';
+import {MarkdownModule, MarkdownService} from 'ngx-markdown';
 
 @NgModule({
   declarations: [
@@ -24,9 +26,11 @@ import { TopbarComponent } from './components/topbar/topbar.component';
     SplitterModule,
     ButtonModule,
     ToolbarModule,
-    SplitButtonModule
+    SplitButtonModule,
+    FormsModule,
+    MarkdownModule.forRoot(),
   ],
-  providers: [],
+  providers: [MarkdownService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

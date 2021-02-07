@@ -1,8 +1,8 @@
-<p-splitter [style]="{'height': '300px'}">
+<p-splitter [style]="{'height': '5000px'}">
   <ng-template>
-    Panel 1
+    <textarea style="width: 100%; height: 100%;" [(ngModel)]="markdown"></textarea>
   </ng-template>
   <ng-template>
-    Panel 2
+    <markdown class="variable-binding" [data]="markdown"></markdown>
   </ng-template>
 </p-splitter>
